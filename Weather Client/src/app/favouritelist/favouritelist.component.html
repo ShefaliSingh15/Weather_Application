@@ -1,0 +1,25 @@
+<app-update-weather *ngIf="update" [weatherup]="update"></app-update-weather>
+
+ <table class="table table-responsive table-sm table-bordered Fav" *ngFor=" let  d of ref ">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Humidity</th>
+      <th>Description</th>
+       <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{d.dt_txt}}</td>
+      <td>{{d.humidity}}</td>
+      <td>{{d.description}}</td>
+      <td><button class="btn btn-primary" (click)=" weatherUpdate(d)" >Update</button></td>
+      <td><button class="btn btn-primary" (click)=" deletefavourites(d)" >Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<div align="center" style="margin-top:50px">
+
+<button class = "nav-link btn btn-primary" (click)="display()"> Click For Favourites</button>
+</div>

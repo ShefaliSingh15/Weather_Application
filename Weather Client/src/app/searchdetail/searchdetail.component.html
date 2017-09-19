@@ -1,0 +1,38 @@
+<div class="container">
+
+
+<div class="row" >
+
+   
+    <div class="col-sm-12">
+        <div *ngIf="users">
+
+        <img class="img-thumbnail" src="http://openweathermap.org/img/w/{{users.weather[0].icon}}.png" alt="Card image cap"> 
+
+        <div class="card" style="width: 20rem, height: 40rem;">
+        <div class="card-text">
+
+        <div class="card-text">
+         <h6>City:{{users.city}}</h6>
+        </div>
+        
+         <h6>Datee:{{users.dt_txt}}</h6>
+        </div>
+        
+        <div class="card-title">
+            <h6>Humidity:{{users.main.humidity}}</h6>
+        </div>
+
+    	<div class="card-title">
+            <h6>Temperature:{{users.main.temp}}</h6>
+        </div>
+
+    	<div class="card-title">
+        <h6> Description:{{users.weather[0].description}}</h6>
+       </div>
+        <button type="button" class="btn btn-primary" (click)="add(users)">Add To Favourite List</button><br>
+        </div>
+    	</div> 
+        </div>
+        </div>
+    </div>  

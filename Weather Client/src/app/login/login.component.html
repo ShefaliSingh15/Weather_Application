@@ -1,0 +1,14 @@
+  <div align="center" style="margin-top:50px">
+
+ <div class="text-success"><h1>Login Form</h1></div>
+
+<div class="login-page">
+
+  <div class="form">
+    <form class="login-form">
+      <input type="text" name="email" placeholder="email" [(ngModel)]="data.email">
+      <input type="password" name="password" placeholder="password" [(ngModel)]="data.password">
+      <button (click)=getdata(data)>login</button>
+    </form>
+  </div>
+</div>

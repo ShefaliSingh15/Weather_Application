@@ -1,0 +1,14 @@
+
+    <div class="container">
+       <div class="row" align="center">
+
+          <div class="col-sm-12">
+           <div *ngFor=" let a of user.list| paginate: { itemsPerPage: 3, currentPage: p }">
+                <app-searchdetail *ngIf="a" [users]="a"> </app-searchdetail>
+           </div>
+           <br>
+           <pagination-controls (pageChange)="p=$event"></pagination-controls>
+          </div>
+       </div>
+    </div>
+    

@@ -1,0 +1,23 @@
+<p>
+  update-weather works!
+</p>
+<table class="table table-responsive table-sm table-bordered Fav">
+  <thead>
+    <tr >
+    
+      <th>Date</th>
+      <th>Humidity</th>
+      <th>Description</th>
+       <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{weatherup.dt_txt}}</td>
+      <td>{{weatherup.humidity}}</td>
+      <td><input [(ngModel)]="toupdate" placeholder="{{weatherup.description}}"></td>
+      <td><button class="btn btn-primary" (click)="update(weatherup)" >Update</button></td>
+      
+    </tr>
+  </tbody>
+</table>
